@@ -45,6 +45,12 @@
   background-color: #077514;
 }
 
+.keyboard .used {
+  pointer-events: none;
+  background-color: rgb(12 15 34);
+  border-color: transparent;
+}
+
 /* main */
 
 .main-section .key {
@@ -90,6 +96,7 @@
   display: flex;
   background-color: #090909;
   border-radius: 10px;
+ 
 }
 
 /* mouse */
@@ -131,6 +138,12 @@
   background-color: #08b81c;
 }
 
+.mouse span.used {
+  pointer-events: none;
+  background-color: #0c0f22;
+  border-color: transparent;
+}
+
 .mouse .mouse-button-up.selected {
   background-color: transparent;
   color: #01ff1e;
@@ -141,8 +154,17 @@
   color: #01ff1e;
 }
 
+.mouse .mouse-button-up.used {
+  background-color: transparent;
+  pointer-events: none;
+  color: #fbc500;
+}
 
-
+.mouse .mouse-button-down.used {
+  background-color: transparent;
+  color: #fbc500;
+  pointer-events: none;
+}
 
 .mouse-button-wheel {
   background-color: #3f3f3f;
@@ -235,7 +257,9 @@
   transform: scale(1.5);
   box-shadow: 1px 1px 3px 2px rgb(0, 0, 0);
 }
-.helpers{
+
+.helpers {
+  margin: 35px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
