@@ -18,7 +18,11 @@ export interface IMainStore {
 export interface IUiStore {
   showHeavyWeapon: boolean;
   isSound: boolean;
+  currTab: string;
+  loading: boolean;
+  setCurrTab: (tab: string) => void;
   menuToRender: () => { title: string; value: string; img: string }[][];
   setShowHeavyWeapon: (flag: boolean) => void;
   setSound: (flag: boolean) => void;
+  fakeLoading: (delay: number) => void;
 }

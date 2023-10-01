@@ -1,8 +1,4 @@
-* {
-  /* padding: 0;
-  margin: 0; */
-  /* box-sizing: border-box; */
-}
+
 
 #root {
   max-width: 1280px;
@@ -85,6 +81,7 @@
 
 /* output */
 .output {
+  cursor: text;
   margin-top: 25px;
   text-align: left;
   text-indent: 5px;
@@ -250,6 +247,7 @@
 }
 
 .buy-menu-item:hover {
+  z-index: 1;
   transform: scale(2);
 }
 

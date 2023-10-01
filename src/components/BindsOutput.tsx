@@ -1,11 +1,12 @@
 import { FC, useEffect } from "react";
 import { useMainStore } from "../store";
 
+
 const BindsOutput: FC = () => {
   const { currentBind, printedBind, setCurrentBind, keyToBind, selectedEquip } = useMainStore();
 
   useEffect(() => {
-    setCurrentBind([`bind "${keyToBind}" "buy ${selectedEquip}"`]);
+    setCurrentBind([`bind "${keyToBind}" "buy ${selectedEquip};"`]);
   }, [keyToBind, selectedEquip]);
 
   return (

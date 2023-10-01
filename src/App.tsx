@@ -1,21 +1,27 @@
-import { FC } from "react";
+import { FC,  } from "react";
 import "./App.css";
 import KeySelector from "./components/KeySelector";
-import BuyMenu from "./components/BuyMenu";
 import BindsOutput from "./components/BindsOutput";
 import ControlPanel from "./components/ControlPanel";
+import { useMainStore } from "./store";
+import TabContent from "./components/TabContent";
 
 const App: FC = () => {
+  const { setSetSelectedEquip, setSelectedKey, setSelectedMouseKey } = useMainStore();
   return (
-    <>
-      <BuyMenu />
-
+    <div
+      onContextMenu={(e) => {
+        e.preventDefault();
+        setSelectedKey("");
+        setSelectedMouseKey("");
+        setSetSelectedEquip("");
+      }}
+    >
       <ControlPanel />
-
+      <TabContent />
       <KeySelector />
-
       <BindsOutput />
-    </>
+    </div>
   );
 };
 

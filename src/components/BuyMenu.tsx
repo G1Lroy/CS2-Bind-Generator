@@ -3,13 +3,13 @@ import { useUiStore } from "../store/user";
 import { useMainStore } from "../store";
 import { playSound } from "../utils";
 import zoomSound from "./../assets/sounds/zoom.mp3";
+import { SkeletonLoader } from "./SkeletonLoader";
 
 const BuyMenu: FC = () => {
   const zoomSoudRef = useRef<HTMLAudioElement>(null);
   const { menuToRender, isSound } = useUiStore();
   const { selectedEquip, setSetSelectedEquip } = useMainStore();
   const menu = menuToRender();
-
   const clickHandler = (item: string) => {
     if (selectedEquip === item) return;
     setSetSelectedEquip(item);
@@ -27,7 +27,9 @@ const BuyMenu: FC = () => {
               onClick={() => clickHandler(item.value)}
               className={`buy-menu-item ${selectedEquip === item.value ? "selected" : ""}`}
             >
-              <div className="buy-menu-item__img">{item.img && <img src={item.img}></img>}</div>
+              <div className="buy-menu-item__img">
+                {item.img ? <img loading="lazy" src={item.img} alt={item.title}></img> : <SkeletonLoader />}
+              </div>
             </div>
           ))}
         </div>

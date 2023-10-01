@@ -5,10 +5,18 @@ import { IUiStore } from "./types";
 export const useUiStore = create<IUiStore>((set, get) => ({
   showHeavyWeapon: false,
   isSound: true,
+  currTab: "buy-menu",
+  loading: true,
+  setCurrTab: (tab) => set((state) => ({ ...state, currTab: tab })),
   menuToRender: () =>
     get().showHeavyWeapon
       ? [buyMenuPistol, buyMenuSmg, buyMenuRifle, buyMenuHeavy, buyMenuEquip]
       : [buyMenuPistol, buyMenuSmg, buyMenuRifle, buyMenuEquip],
   setShowHeavyWeapon: (flag) => set((state) => ({ ...state, showHeavyWeapon: flag })),
   setSound: (flag) => set((state) => ({ ...state, isSound: flag })),
+  fakeLoading: (delay) => {
+    setTimeout(() => {
+      set((state) => ({ ...state, loading: false }));
+    }, delay);
+  },
 }));
