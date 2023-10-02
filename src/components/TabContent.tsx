@@ -3,11 +3,11 @@ import { animated, useTransition } from "react-spring";
 import { useUiStore } from "../store/user";
 import BuyMenu from "./BuyMenu";
 import OtherBinds from "./OtherBinds";
-import { animationConfig } from "../constans/mockObjects";
+import { animationTabs } from "../constans/mockObjects";
 
 const TabContent: FC = () => {
   const { currTab } = useUiStore();
-  const transitions = useTransition(currTab, animationConfig);
+  const transitions = useTransition(currTab, animationTabs);
 
   return (
     <animated.div className="tab-content">

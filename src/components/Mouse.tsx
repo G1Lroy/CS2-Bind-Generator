@@ -5,7 +5,7 @@ import mouse from "./../assets/images/mouse.png";
 import clickSound from "./../assets/sounds/ckick.mp3";
 import { playSound } from "../utils";
 import { useUiStore } from "../store/user";
-
+import "./../assets/css/mouse.css";
 const Mouse: FC = () => {
   const clickSoundRef = useRef<HTMLAudioElement>(null);
   const { selectedMouseKey, usedKeys, setSelectedKey, setSelectedMouseKey } = useMainStore();

@@ -3,6 +3,7 @@ import { useMainStore } from "../store";
 import { FC, useRef } from "react";
 import useSound from "./../assets/sounds/use_key.mp3";
 import { generateCfgFile, playSound } from "../utils";
+import './../assets/css/helpers.css'
 
 const ControlPanel: FC = () => {
   const useSoundRef = useRef<HTMLAudioElement>(null);

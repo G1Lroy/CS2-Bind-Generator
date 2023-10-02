@@ -1,8 +1,13 @@
-export const animationConfig = {
-  config: { duration: 400 },
-  from: { opacity: 0, transform: "translateX(-100%)" },
-  enter: { opacity: 1, transform: "translateX(0%)" },
-  leave: { opacity: 0, transform: "translateX(-100%)" },
+export const animationTabs = {
+  from: { opacity: 0 },
+  enter: { opacity: 1 },
+  leave: { opacity: 0 },
+  config: { duration: 500 },
+};
+export const animationCards = {
+  transform: "translateX(0%)",
+  from: { transform: "translateY(-100%)" },
+  config: { duration: 300 },
 };
 export const mouseBtns = [
   { class: "mouse-button", value: "mouse2", text: null },

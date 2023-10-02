@@ -1,0 +1,113 @@
+/* mouse */
+.mouse {
+    user-select: none;
+    position: relative;
+}
+
+.mouse img {
+    width: 150px;
+    padding: 0 15px;
+}
+
+.mouse span {
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.mouse-button {
+    background-color: #3f3f3f;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 23px;
+    right: 35px;
+}
+
+.left {
+    right: auto;
+    left: 33px;
+}
+
+.mouse span:hover {
+    cursor: pointer;
+}
+
+.mouse span.selected {
+    background-color: #08b81c;
+}
+
+.mouse span.used {
+    pointer-events: none;
+    background-color: #0c0f22;
+    border-color: transparent;
+}
+
+.mouse .mouse-button-up.selected {
+    background-color: transparent;
+    color: #01ff1e;
+}
+
+.mouse .mouse-button-down.selected {
+    background-color: transparent;
+    color: #01ff1e;
+}
+
+.mouse .mouse-button-up.used {
+    background-color: transparent;
+    pointer-events: none;
+    color: #fbc500;
+}
+
+.mouse .mouse-button-down.used {
+    background-color: transparent;
+    color: #fbc500;
+    pointer-events: none;
+}
+
+.mouse-button-wheel {
+    background-color: #3f3f3f;
+    width: 13px;
+    height: 30px;
+    top: 23px;
+    left: 68px;
+    border-radius: 10px;
+}
+
+.mouse-button-up {
+    padding: 5px;
+    font-size: 25px;
+    color: #ffffff;
+    top: -20px;
+    left: 64px;
+}
+
+.mouse-button-down {
+    padding: 5px;
+    font-size: 25px;
+    color: #ffffff;
+    top: 53px;
+    left: 64px;
+}
+
+.mouse-button5 {
+    background-color: #3f3f3f;
+    width: 10px;
+    height: 30px;
+    top: 65px;
+    left: 17px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.mouse-button4 {
+    background-color: #3f3f3f;
+    width: 10px;
+    height: 30px;
+    top: 100px;
+    left: 17px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #ffffff;
+}

@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { useMainStore } from "../store";
 import { SkeletonLoader } from "./SkeletonLoader";
+import { animated, useSpring } from "react-spring";
+import { animationCards } from "../constans/mockObjects";
 
 interface BuyMenyitemProps {
   item: { title: string; value: string; img: string };
@@ -10,17 +12,20 @@ interface BuyMenyitemProps {
 const BuyMenuItem: FC<BuyMenyitemProps> = React.memo(({ item, clickHandler }) => {
   const MemoizedSkeletonLoader = React.memo(SkeletonLoader);
   const { selectedEquip } = useMainStore();
-  
+  const animationProps = useSpring(animationCards);
+
   return (
-    <div
-      title={item.title}
+    <animated.div
       onClick={() => clickHandler(item.value)}
       className={`buy-menu-item ${selectedEquip === item.value ? "selected" : ""}`}
+      style={animationProps}
     >
-      <div className="buy-menu-item__img">
-        {item.img ? <img loading="lazy" src={item.img} alt={item.title} /> : <MemoizedSkeletonLoader />}
-      </div>
-    </div>
+      {item.img ? (
+        <img loading="lazy" className={`item-img `} src={item.img} title={item.title} alt={item.title} />
+      ) : (
+        <MemoizedSkeletonLoader />
+      )}
+    </animated.div>
   );
 });
 

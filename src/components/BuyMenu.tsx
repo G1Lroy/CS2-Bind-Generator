@@ -4,6 +4,7 @@ import { useMainStore } from "../store";
 import { playSound } from "../utils";
 import zoomSound from "./../assets/sounds/zoom.mp3";
 import BuyMenuItem from "./BuyMenuItem";
+import "./../assets/css/buyMenu.css";
 
 const BuyMenu: FC = () => {
   const zoomSoudRef = useRef<HTMLAudioElement>(null);
@@ -19,15 +20,17 @@ const BuyMenu: FC = () => {
 
   return (
     <div className="buy-menu">
-      {menu.map((col, idx) => (
-        <div key={idx} className="buy-menu-col">
-          {col.map((item) =>
-            item.side === currSide || item.side === "both" ? (
-              <BuyMenuItem key={item.title} item={item} clickHandler={clickHandler} />
-            ) : null
-          )}
-        </div>
-      ))}
+      <div className="buy-menu-inner">
+        {menu.map((col, idx) => (
+          <div key={idx} className="buy-menu-col">
+            {col.map((item) =>
+              item.side === currSide || item.side === "both" ? (
+                <BuyMenuItem key={item.title} item={item} clickHandler={clickHandler} />
+              ) : null
+            )}
+          </div>
+        ))}
+      </div>
 
       {isSound && (
         <audio ref={zoomSoudRef}>

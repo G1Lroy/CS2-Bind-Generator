@@ -5,6 +5,7 @@ import { playSound } from "../utils";
 import { useMainStore } from "../store";
 import { useUiStore } from "../store/user";
 import clickSound from "./../assets/sounds/ckick.mp3";
+import "./../assets/css/keyboard.css";
 
 const Keyboard: FC = () => {
   const clickSoundRef = useRef<HTMLAudioElement>(null);
@@ -19,7 +20,6 @@ const Keyboard: FC = () => {
   };
   return (
     <div className="keyboard">
-
       <div className="main-section">
         {mainLayout.map((row, rIdx) => (
           <div key={rIdx} className="row">

@@ -1,0 +1,9 @@
+/* output */
+.output {
+    min-width: 300px;
+    padding: 0 10px;
+    cursor: text;
+    text-align: left;
+    background-color: #c3bfbf;
+    grid-area: BO;
+}
