@@ -1,8 +1,7 @@
-import React from "react";
 
-type Props = {};
 
-const OtherBinds = (props: Props) => {
+
+const OtherBinds = () => {
   return <div>OtherBinds</div>;
 };
 

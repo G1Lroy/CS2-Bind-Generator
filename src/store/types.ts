@@ -20,8 +20,10 @@ export interface IUiStore {
   isSound: boolean;
   currTab: string;
   loading: boolean;
+  currSide: string;
+  setCurrSide: (side: string) => void;
   setCurrTab: (tab: string) => void;
-  menuToRender: () => { title: string; value: string; img: string }[][];
+  menuToRender: () => { title: string; value: string; img: string; side: string }[][];
   setShowHeavyWeapon: (flag: boolean) => void;
   setSound: (flag: boolean) => void;
   fakeLoading: (delay: number) => void;

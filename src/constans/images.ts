@@ -12,39 +12,40 @@ import cz75 from "./../assets/images/pistol/cz-75.webp";
 import vest from "./../assets/images/equip/kevlar.webp";
 import vestHelmet from "./../assets/images/equip/kevlar_helmet.webp";
 import kit from "./../assets/images/equip/defuse_kit.webp";
-import zeus from "./../assets/images/equip/zeus.jpg";
-import flash from "./../assets/images/equip/flash.jpg";
-import smoke from "./../assets/images/equip/smoke.jpg";
-import moly from "./../assets/images/equip/moly_t.jpg";
-import he from "./../assets/images/equip/he.jpg";
-import decoy from "./../assets/images/equip/decoy.jpg";
+import zeus from "./../assets/images/equip/zeus.webp";
+import flash from "./../assets/images/equip/flash.webp";
+import smoke from "./../assets/images/equip/smoke.webp";
+import moly from "./../assets/images/equip/moly_t.webp";
+import moly_ct from "./../assets/images/equip/moly_ct.webp";
+import he from "./../assets/images/equip/he.webp";
+import decoy from "./../assets/images/equip/decoy.webp";
 
-import mac10 from "./../assets/images/smg/mac10.jpg";
-import mp9 from "./../assets/images/smg/mp9.jpg";
-import mp7 from "./../assets/images/smg/mp7.jpg";
-import mp5 from "./../assets/images/smg/mp5sd.jpg";
-import ump from "./../assets/images/smg/ump.jpg";
-import p90 from "./../assets/images/smg/p90.jpg";
-import bizon from "./../assets/images/smg/bizon.jpg";
+import mac10 from "./../assets/images/smg/mac10.webp";
+import mp9 from "./../assets/images/smg/mp9.webp";
+import mp7 from "./../assets/images/smg/mp7.webp";
+import mp5 from "./../assets/images/smg/mp5sd.webp";
+import ump from "./../assets/images/smg/ump.webp";
+import p90 from "./../assets/images/smg/p90.webp";
+import bizon from "./../assets/images/smg/bizon.webp";
 
-import nova from "./../assets/images/heavy/nova.jpg";
-import xm1014 from "./../assets/images/heavy/xm1014.jpg";
-import mag7 from "./../assets/images/heavy/mag7.jpg";
-import saved from "./../assets/images/heavy/sawed.jpg";
-import scar from "./../assets/images/heavy/scar.jpg";
-import g3sg1 from "./../assets/images/heavy/g3sg1.jpg";
-import negev from "./../assets/images/heavy/negev.jpg";
-import m249 from "./../assets/images/heavy/m249.jpg";
+import nova from "./../assets/images/heavy/nova.webp";
+import xm1014 from "./../assets/images/heavy/xm1014.webp";
+import mag7 from "./../assets/images/heavy/mag7.webp";
+import saved from "./../assets/images/heavy/saved.webp";
+import scar from "./../assets/images/heavy/scar.webp";
+import g3sg1 from "./../assets/images/heavy/g3sg1.webp";
+import negev from "./../assets/images/heavy/negev.webp";
+import mg249 from "./../assets/images/heavy/mg249.webp";
 
-import ak47 from "./../assets/images/rifle/ak47.jpg";
-import m4a4 from "./../assets/images/rifle/m4a4.jpg";
-import m4a1s from "./../assets/images/rifle/m4a1s.jpg";
-import galil from "./../assets/images/rifle/galil.jpg";
-import famas from "./../assets/images/rifle/famas.jpg";
-import ssg08 from "./../assets/images/rifle/ssg08.jpg";
-import sg553 from "./../assets/images/rifle/sg553.jpg";
-import aug from "./../assets/images/rifle/aug.jpg";
-import awp from "./../assets/images/rifle/awp.jpg";
+import ak47 from "./../assets/images/rifle/ak47.webp";
+import m4a4 from "./../assets/images/rifle/m4a4.webp";
+import m4a1s from "./../assets/images/rifle/m4a1s.webp";
+import galil from "./../assets/images/rifle/galil.webp";
+import famas from "./../assets/images/rifle/famas.webp";
+import ssg08 from "./../assets/images/rifle/ssg08.webp";
+import sg553 from "./../assets/images/rifle/sg553.webp";
+import aug from "./../assets/images/rifle/aug.webp";
+import awp from "./../assets/images/rifle/awp.webp";
 
 export const pistolsImg = {
   usp,
@@ -68,6 +69,7 @@ export const equipsImg = {
   moly,
   he,
   decoy,
+  moly_ct,
 };
 export const smgsImg = {
   mac10,
@@ -86,7 +88,7 @@ export const heavysImgs = {
   scar,
   g3sg1,
   negev,
-  m249,
+  mg249,
 };
 export const riflesImgs = {
   ak47,

@@ -6,7 +6,16 @@ import { generateCfgFile, playSound } from "../utils";
 
 const ControlPanel: FC = () => {
   const useSoundRef = useRef<HTMLAudioElement>(null);
-  const { showHeavyWeapon, setShowHeavyWeapon, setSound, isSound, currTab, setCurrTab } = useUiStore();
+  const {
+    showHeavyWeapon,
+    setShowHeavyWeapon,
+    setSound,
+    isSound,
+    currTab,
+    setCurrTab,
+    setCurrSide,
+    currSide,
+  } = useUiStore();
   const {
     keyToBind,
     selectedEquip,
@@ -36,7 +45,7 @@ const ControlPanel: FC = () => {
           checked={showHeavyWeapon}
           onChange={() => setShowHeavyWeapon(!showHeavyWeapon)}
         ></input>
-        Heavy weapon
+        Other weapons
       </label>
       <label htmlFor="disable-isSound">
         <input
@@ -80,6 +89,16 @@ const ControlPanel: FC = () => {
           Other Binds
         </button>
       </div>
+
+      <>
+        <label>
+          <input type="radio" checked={currSide === "ct"} name="side" onChange={() => setCurrSide("ct")} />
+          CT
+        </label>
+        <label>
+          <input type="radio" checked={currSide === "t"} name="side" onChange={() => setCurrSide("t")} />T
+        </label>
+      </>
 
       {isSound && (
         <audio ref={useSoundRef}>

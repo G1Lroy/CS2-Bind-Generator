@@ -1,5 +1,5 @@
 import { FC, useRef } from "react";
-import { mouseBtns } from "../constans/mouse";
+import { mouseBtns } from "../constans/mockObjects";
 import { useMainStore } from "../store";
 import mouse from "./../assets/images/mouse.png";
 import clickSound from "./../assets/sounds/ckick.mp3";
