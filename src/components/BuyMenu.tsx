@@ -1,10 +1,12 @@
 import { FC, useRef } from "react";
-import { useUiStore } from "../store/user";
+import { useUiStore } from "../store/uiStore";
 import { useMainStore } from "../store";
 import { playSound } from "../utils";
 import zoomSound from "./../assets/sounds/zoom.mp3";
 import BuyMenuItem from "./BuyMenuItem";
-import "./../assets/css/buyMenu.css";
+import "./../assets/css/buy-menu.css";
+import BuyMenuControls from "./BuyMenuControls";
+import AudioRef from "./UI/AudioRef";
 
 const BuyMenu: FC = () => {
   const zoomSoudRef = useRef<HTMLAudioElement>(null);
@@ -17,6 +19,9 @@ const BuyMenu: FC = () => {
     setSetSelectedEquip(item);
     playSound(zoomSoudRef);
   };
+  const checkSide = (item: { title: string; value: string; img: string; side: string }) => {
+    return item.side === currSide || item.side === "both";
+  };
 
   return (
     <div className="buy-menu">
@@ -24,19 +29,15 @@ const BuyMenu: FC = () => {
         {menu.map((col, idx) => (
           <div key={idx} className="buy-menu-col">
             {col.map((item) =>
-              item.side === currSide || item.side === "both" ? (
+              checkSide(item) ? (
                 <BuyMenuItem key={item.title} item={item} clickHandler={clickHandler} />
               ) : null
             )}
           </div>
         ))}
       </div>
-
-      {isSound && (
-        <audio ref={zoomSoudRef}>
-          <source src={zoomSound} type="audio/mp3" />
-        </audio>
-      )}
+      <BuyMenuControls />
+      {isSound && <AudioRef ref={zoomSoudRef} src={zoomSound} />}
     </div>
   );
 };

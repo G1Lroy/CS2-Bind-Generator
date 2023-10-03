@@ -12,7 +12,6 @@ export const useUiStore = create<IUiStore>((set, get) => ({
   showHeavyWeapon: false,
   isSound: true,
   currTab: "buy-menu",
-  loading: true,
   currSide: "ct",
   setCurrSide: (side) => set((state) => ({ ...state, currSide: side })),
   setCurrTab: (tab) => set((state) => ({ ...state, currTab: tab })),
@@ -22,9 +21,4 @@ export const useUiStore = create<IUiStore>((set, get) => ({
       : [buyMenuPistol, buyMenuSmg, buyMenuRifle, buyMenuEquip],
   setShowHeavyWeapon: (flag) => set((state) => ({ ...state, showHeavyWeapon: flag })),
   setSound: (flag) => set((state) => ({ ...state, isSound: flag })),
-  fakeLoading: (delay) => {
-    setTimeout(() => {
-      set((state) => ({ ...state, loading: false }));
-    }, delay);
-  },
 }));

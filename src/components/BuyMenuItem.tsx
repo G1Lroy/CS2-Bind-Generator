@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useMainStore } from "../store";
-import { SkeletonLoader } from "./SkeletonLoader";
+import { SkeletonLoader } from "./UI/SkeletonLoader";
 import { animated, useSpring } from "react-spring";
 import { animationCards } from "../constans/mockObjects";
 

@@ -5,7 +5,7 @@ import BindsOutput from "./components/BindsOutput";
 import ControlPanel from "./components/ControlPanel";
 import { useMainStore } from "./store";
 import TabContent from "./components/TabContent";
-import { useUiStore } from "./store/user";
+import { useUiStore } from "./store/uiStore";
 
 const App: FC = () => {
   const { setSetSelectedEquip, setSelectedKey, setSelectedMouseKey } = useMainStore();

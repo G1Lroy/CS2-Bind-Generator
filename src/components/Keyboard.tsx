@@ -3,9 +3,10 @@ import { mainLayout, middleLayout, numpadLayout } from "../constans/keyboard";
 import { mainValues, midValues, numpadValues } from "../constans/keyboard/keyVaule";
 import { playSound } from "../utils";
 import { useMainStore } from "../store";
-import { useUiStore } from "../store/user";
+import { useUiStore } from "../store/uiStore";
 import clickSound from "./../assets/sounds/ckick.mp3";
 import "./../assets/css/keyboard.css";
+import AudioRef from "./UI/AudioRef";
 
 const Keyboard: FC = () => {
   const clickSoundRef = useRef<HTMLAudioElement>(null);
@@ -18,20 +19,22 @@ const Keyboard: FC = () => {
     setSelectedMouseKey("");
     playSound(clickSoundRef);
   };
+
+  const getClassName = (key: string): string => {
+    return [
+      key !== "" ? "key" : "empty",
+      key === "space" ? "space" : "",
+      key === selectedKey ? "selected" : "",
+      usedKeys.includes(key) ? "used" : "",
+    ].join(" ");
+  };
   return (
     <div className="keyboard">
       <div className="main-section">
         {mainLayout.map((row, rIdx) => (
           <div key={rIdx} className="row">
             {row.map((key, kIdx) => (
-              <div
-                onClick={() => clickHandler(key)}
-                className={`key ${key === "space" ? "space" : ""} 
-                    ${key === selectedKey ? "selected" : ""}
-                    ${usedKeys.includes(key) ? "used" : ""}
-                    `}
-                key={kIdx}
-              >
+              <div onClick={() => clickHandler(key)} className={getClassName(key)} key={kIdx}>
                 {mainValues[key] ? mainValues[key] : key}
               </div>
             ))}
@@ -43,15 +46,7 @@ const Keyboard: FC = () => {
         {middleLayout.map((row, rIdx) => (
           <div key={rIdx} className="row">
             {row.map((key, kIdx) => (
-              <div
-                onClick={() => clickHandler(key)}
-                className={`
-                  ${key !== "" ? "key" : "empty"} 
-                  ${key === selectedKey ? "selected" : ""}
-                 ${usedKeys.includes(key) ? "used" : ""}
-                  `}
-                key={kIdx}
-              >
+              <div onClick={() => clickHandler(key)} className={getClassName(key)} key={kIdx}>
                 {midValues[key]}
               </div>
             ))}
@@ -63,14 +58,7 @@ const Keyboard: FC = () => {
         {numpadLayout.map((row, rIdx) => (
           <div key={rIdx} className="row">
             {row.map((key, kIdx) => (
-              <div
-                onClick={() => clickHandler(key)}
-                className={`key 
-                    ${key === selectedKey ? "selected" : ""}
-                    ${usedKeys.includes(key) ? "used" : ""}
-                    `}
-                key={kIdx}
-              >
+              <div onClick={() => clickHandler(key)} className={getClassName(key)} key={kIdx}>
                 {numpadValues[key]}
               </div>
             ))}
@@ -78,11 +66,7 @@ const Keyboard: FC = () => {
         ))}
       </div>
 
-      {isSound && (
-        <audio ref={clickSoundRef}>
-          <source src={clickSound} type="audio/mp3" />
-        </audio>
-      )}
+      {isSound && <AudioRef ref={clickSoundRef} src={clickSound} />}
     </div>
   );
 };

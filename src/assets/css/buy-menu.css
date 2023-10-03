@@ -1,5 +1,7 @@
 .buy-menu {
-    min-width: 850px;
+    user-select: none;
+    position: relative;
+    min-width: 865px;
     height: 300px;
     display: flex;
     justify-content: center;

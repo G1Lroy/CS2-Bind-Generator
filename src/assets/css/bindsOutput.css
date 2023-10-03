@@ -1,9 +1,28 @@
 /* output */
 .output {
+    position: relative;
     min-width: 300px;
     padding: 0 10px;
     cursor: text;
     text-align: left;
     background-color: #c3bfbf;
     grid-area: BO;
+}
+
+.current-bind {
+    color: blue;
+    font-weight: 500;
+    padding: 35px 0 15px 0;
+}
+
+.bind-controls {
+    user-select: none;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
 }
