@@ -25,14 +25,14 @@ const App: FC = () => {
   return (
     <div onContextMenu={(e) => resetSelected(e)}>
       <header>HEADER</header>
-      <main>
-        <ControlPanel />
-        <section className="main">
-          <KeySelector />
-          <TabContent />
-          <BindsOutput />
-        </section>
+      <ControlPanel />
+
+      <main className="main">
+        <KeySelector />
+        <TabContent />
+        <BindsOutput />
       </main>
+
       <footer>FOOTER</footer>
     </div>
   );

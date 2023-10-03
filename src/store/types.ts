@@ -3,9 +3,11 @@ export interface IMainStore {
   selectedMouseKey: string;
   keyToBind: string;
   selectedEquip: string;
+  selectedAction: string[];
   usedKeys: string[];
   currentBind: string[];
   printedBind: string[];
+  setSelectedAction: (action: string[]) => void;
   setSelectedKey: (key: string) => void;
   setSelectedMouseKey: (key: string) => void;
   setKeyToBind: (key: string) => void;

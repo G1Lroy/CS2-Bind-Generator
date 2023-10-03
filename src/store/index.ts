@@ -9,6 +9,8 @@ export const useMainStore = create<IMainStore>((set) => ({
   currentBind: [],
   printedBind: [],
   usedKeys: [],
+  selectedAction: ['bind "_" "toggle voice_modenable 1 0'],
+  setSelectedAction: (action) => set((state) => ({ ...state, selectedAction: action })),
   setSelectedKey: (key) => set((state) => ({ ...state, selectedKey: key })),
   setSelectedMouseKey: (key) => set((state) => ({ ...state, selectedMouseKey: key })),
   setKeyToBind: (key) => set((state) => ({ ...state, keyToBind: key })),
@@ -24,5 +26,6 @@ export const useMainStore = create<IMainStore>((set) => ({
       selectedEquip: "",
       printedBind: [],
       usedKeys: [],
+      selectedAction: ['bind "_" "toggle voice_modenable 1 0'],
     })),
 }));

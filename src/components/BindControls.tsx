@@ -9,6 +9,7 @@ import Ubutton from "./UI/Ubutton";
 const BindControls: FC = () => {
   const useSoundRef = useRef<HTMLAudioElement>(null);
   const {
+    currentBind,
     keyToBind,
     selectedEquip,
     printedBind,
@@ -21,18 +22,19 @@ const BindControls: FC = () => {
   } = useMainStore();
   const { isSound } = useUiStore();
   const printToConsole = () => {
-    setPrintedBind([`bind "${keyToBind}" "buy ${selectedEquip};"`]);
+    setPrintedBind(currentBind);
     setUsedKeys(keyToBind);
-    playSound(useSoundRef);
     setSetSelectedEquip("");
     setSelectedKey("");
     setSelectedMouseKey("");
+    playSound(useSoundRef);
   };
+
   return (
     <div className="bind-controls">
       <Ubutton
         OnClick={() => printToConsole()}
-        title={!keyToBind || !selectedEquip ? "Chose key and equip" : "Add to cfg"}
+        title={!keyToBind || !selectedEquip ? "Chose key and command" : "Add to cfg"}
         disabled={!keyToBind || !selectedEquip}
         text=" +Add command"
       />

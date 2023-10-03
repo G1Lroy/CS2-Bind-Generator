@@ -1,13 +1,8 @@
-export const animationTabs = {
-  from: { opacity: 0 },
-  enter: { opacity: 1 },
-  leave: { opacity: 0 },
-  config: { duration: 500 },
-};
 export const animationCards = {
+  opacity: 1,
   transform: "translateX(0%)",
-  from: { transform: "translateY(-100%)" },
-  config: { duration: 300 },
+  from: { opacity: 0, transform: "translateX(-100%)" },
+  config: { duration: 400 },
 };
 export const mouseBtns = [
   { class: "mouse-button", value: "mouse2", text: null },
@@ -18,3 +13,24 @@ export const mouseBtns = [
   { class: "mouse-button5", value: "mouse5", text: "5" },
   { class: "mouse-button4", value: "mouse4", text: "4" },
 ];
+export const otherBinds = [
+  {
+    action: "DropBomb",
+    text: ['alias "+dropc4" "slot5"', 'alias "-dropc4" "drop"', `bind "_" "+dropc4;"`],
+  },
+  { action: "ToggleMuteAll", text: [`bind "_" "toggle voice_modenable 1 0"`] },
+  {
+    action: "JumpThrow",
+    text: [
+      'alias "+bish" "+jump"',
+      'alias "+bash" "-attack; -attack2"',
+      'alias "+bosh" "-jump"',
+      `bind "_" "+bish; +bash; +bosh"`,
+    ],
+  },
+  {
+    action: "ChangeRadarSize",
+    text: [`bind "_" "incrementvar cl_radar_scale 0.25 1 0.75"`],
+  },
+];
+

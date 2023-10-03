@@ -24,21 +24,24 @@ const BuyMenu: FC = () => {
   };
 
   return (
-    <div className="buy-menu">
-      <div className="buy-menu-inner">
-        {menu.map((col, idx) => (
-          <div key={idx} className="buy-menu-col">
-            {col.map((item) =>
-              checkSide(item) ? (
-                <BuyMenuItem key={item.title} item={item} clickHandler={clickHandler} />
-              ) : null
-            )}
-          </div>
-        ))}
+    <>
+      <div className="buy-menu">
+        <div className="buy-menu-inner">
+          <h2>Buy binds generator</h2>
+          {menu.map((col, idx) => (
+            <div key={idx} className="buy-menu-col">
+              {col.map((item) =>
+                checkSide(item) ? (
+                  <BuyMenuItem key={item.title} item={item} clickHandler={clickHandler} />
+                ) : null
+              )}
+            </div>
+          ))}
+        </div>
+        <BuyMenuControls />
+        {isSound && <AudioRef ref={zoomSoudRef} src={zoomSound} />}
       </div>
-      <BuyMenuControls />
-      {isSound && <AudioRef ref={zoomSoudRef} src={zoomSound} />}
-    </div>
+    </>
   );
 };
 
