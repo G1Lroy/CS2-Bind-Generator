@@ -1,6 +1,39 @@
 .other-binds {
+    user-select: none;
     min-width: 865px;
-    height: 325px;
-    align-items: center;
+    height: 280px;
+}
 
+.commands-container {
+    height: calc(280px - 36px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.command {
+    cursor: pointer;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    transition: all 0.1s ease-in-out;
+}
+
+.command:hover {
+    transform: translateY(-5px);
+}
+
+.command.active {
+    box-shadow: 0px 0px 5px 3px #a202ff;
+}
+
+.command img {
+    object-fit: contain;
+    width: 100px;
+    height: 80px;
 }

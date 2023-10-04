@@ -1,10 +1,10 @@
 .keyboard {
     display: flex;
-    gap: 15px;
-    font-size: 12px;
-    align-items: flex-end;
+    gap: 10px;
+    font-size: 13px;
+    align-items: flex-start;
     background-color: #000000;
-    padding: 10px 15px;
+    padding:10px;
     border-radius: 5px;
     border: 1px solid #327a16;
 }
@@ -20,7 +20,7 @@
 .key {
     user-select: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 5px ;
     border-radius: 2px;
     background-color: #3f3f3f;
     border: 1px solid #327a16;
@@ -37,7 +37,9 @@
 }
 
 /* main */
-
+.main-section{
+    width: 430px;
+}
 .main-section .key {
     flex: 1;
 }
@@ -47,23 +49,28 @@
 }
 
 /* mid */
-
+.mid-section{
+    width: 120px;
+}
 .mid-section .key {
     padding: 5px 0;
-    width: 33px;
+    flex: 1;
+    max-width: 38px;
 }
 
 /* num */
+.num-section {
+    width: 120px;
+}
 .num-section .key {
     flex: 1;
     padding: 5px 0px;
-    width: 22px;
 }
 
 .empty {
-    height: 30px;
+    height: 31.5px;
 }
 
 .key:hover {
-    transform: scale(0.97);
+    background-color: #151515;;
 }

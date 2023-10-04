@@ -1,12 +1,12 @@
 import { FC, useRef } from "react";
-import { useUiStore } from "../store/uiStore";
-import { useMainStore } from "../store";
-import { playSound } from "../utils";
-import zoomSound from "./../assets/sounds/zoom.mp3";
+import { useUiStore } from "../../store/uiStore";
+import { useMainStore } from "../../store";
+import { playSound } from "../../utils";
+import zoomSound from "./../../assets/sounds/zoom.mp3";
 import BuyMenuItem from "./BuyMenuItem";
-import "./../assets/css/buy-menu.css";
+import "./../../assets/css/buy-menu.css";
 import BuyMenuControls from "./BuyMenuControls";
-import AudioRef from "./UI/AudioRef";
+import AudioRef from "../UI/AudioRef";
 
 const BuyMenu: FC = () => {
   const zoomSoudRef = useRef<HTMLAudioElement>(null);
@@ -25,9 +25,9 @@ const BuyMenu: FC = () => {
 
   return (
     <>
+
       <div className="buy-menu">
         <div className="buy-menu-inner">
-          <h2>Buy binds generator</h2>
           {menu.map((col, idx) => (
             <div key={idx} className="buy-menu-col">
               {col.map((item) =>

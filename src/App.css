@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,11 +9,12 @@
   margin: 0 auto;
   padding: 15px;
   text-align: center;
+  
 }
 
 
 .key-selector {
-  padding: 0 20px 20px 20px;
+  /* padding: 0 5px; */
   display: flex;
   justify-content: space-between;
   grid-area: KS;
@@ -28,8 +29,10 @@
     "TC TC TC BO"
     "KS KS KS BO"
   ;
+
 }
 
 .tab-content {
   grid-area: TC;
 }
+

@@ -17,6 +17,7 @@ export const middleLayout = [
 ];
 
 export const numpadLayout = [
+  ["", "", ""],
   ["kp_divide", "kp_multiply", "kp_minus", "kp_plus"],
   ["kp_7", "kp_8", "kp_9"],
   ["kp_4", "kp_5", "kp_6"],

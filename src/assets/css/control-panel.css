@@ -1,5 +1,38 @@
 .control-panel {
+    user-select: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+
+}
+
+.control-btn {
+    padding: 10px;
+    background-color: #0a0a0a;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    margin-right: 10px;
+
+}
+
+.control-btn:focus {
+    outline: none;
+}
+
+.control-btn.active {
+    box-shadow: inset 0px 0px 1px 2px #a202ff;
+}
+
+.control-panel input {
+    margin-right: 10px;
+}
+
+.control-panel label {
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    background-color: #0a0a0a;
+}
+
+.control-panel h2 {
+    font-size: 30px;
+    padding-left: 50px;
 }

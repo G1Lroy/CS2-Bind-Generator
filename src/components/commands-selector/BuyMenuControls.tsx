@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { useUiStore } from "../store/uiStore";
-import "./../assets/css/buy-menu-controls.css";
-import otherWeaponsICON from "./../assets/icons/other-weapons.webp";
-import tIcon from "./../assets/icons/t-side.webp";
-import ctIcon from "./../assets/icons/ct-side.webp";
-import Uinput from "./UI/Uinput";
+import { useUiStore } from "../../store/uiStore";
+import "./../../assets/css/buy-menu-controls.css";
+import otherWeaponsICON from "./../../assets/icons/other-weapons.webp";
+import tIcon from "./../../assets/icons/t-side.webp";
+import ctIcon from "./../../assets/icons/ct-side.webp";
+import Uinput from "../UI/Uinput";
 
 const BuyMenuControls: FC = () => {
   const { showHeavyWeapon, setShowHeavyWeapon, setCurrSide, currSide } = useUiStore();

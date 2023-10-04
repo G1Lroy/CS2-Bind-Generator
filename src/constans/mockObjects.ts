@@ -1,8 +1,9 @@
+import { otherBindsImg } from "./images";
+
 export const animationCards = {
   opacity: 1,
-  transform: "translateX(0%)",
-  from: { opacity: 0, transform: "translateX(-100%)" },
-  config: { duration: 400 },
+  from: { opacity: 0 },
+  config: { duration: 600 },
 };
 export const mouseBtns = [
   { class: "mouse-button", value: "mouse2", text: null },
@@ -15,22 +16,29 @@ export const mouseBtns = [
 ];
 export const otherBinds = [
   {
-    action: "DropBomb",
+    action: "Drop Bomb",
     text: ['alias "+dropc4" "slot5"', 'alias "-dropc4" "drop"', `bind "_" "+dropc4;"`],
+    img: otherBindsImg.dropBomb,
   },
-  { action: "ToggleMuteAll", text: [`bind "_" "toggle voice_modenable 1 0"`] },
+  { action: "ToggleMuteAll", text: [`bind "_" "toggle voice_modenable 1 0"`], img: otherBindsImg.mute },
   {
-    action: "JumpThrow",
+    action: "Jump Throw",
     text: [
       'alias "+bish" "+jump"',
       'alias "+bash" "-attack; -attack2"',
       'alias "+bosh" "-jump"',
       `bind "_" "+bish; +bash; +bosh"`,
     ],
+    img: otherBindsImg.jumpThrow,
   },
   {
-    action: "ChangeRadarSize",
+    action: "Scale Radar",
     text: [`bind "_" "incrementvar cl_radar_scale 0.25 1 0.75"`],
+    img: otherBindsImg.radar,
+  },
+  {
+    action: "Jump+control",
+    text: ['alias +jumpduck "+duck; +jump"', 'alias -jumpduck "-duck; -jump"', 'bind "_" "+jumpduck"'],
+    img: otherBindsImg.jumpCrl,
   },
 ];
-

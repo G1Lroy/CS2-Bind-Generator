@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { useMainStore } from "../store";
-import { SkeletonLoader } from "./UI/SkeletonLoader";
+import { useMainStore } from "../../store";
+import { SkeletonLoader } from "../UI/SkeletonLoader";
 import { animated, useSpring } from "react-spring";
-import { animationCards } from "../constans/mockObjects";
+import { animationCards } from "../../constans/mockObjects";
 
 interface BuyMenyitemProps {
   item: { title: string; value: string; img: string };

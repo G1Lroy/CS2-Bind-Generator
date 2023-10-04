@@ -1,12 +1,12 @@
 import { FC, useRef } from "react";
-import { mouseBtns } from "../constans/mockObjects";
-import { useMainStore } from "../store";
-import mouse from "./../assets/images/mouse.png";
-import clickSound from "./../assets/sounds/ckick.mp3";
-import { playSound } from "../utils";
-import { useUiStore } from "../store/uiStore";
-import "./../assets/css/mouse.css";
-import AudioRef from "./UI/AudioRef";
+import { mouseBtns } from "../../constans/mockObjects";
+import { useMainStore } from "../../store";
+import mouse from "./../../assets/images/mouse.png";
+import clickSound from "./../../assets/sounds/ckick.mp3";
+import { playSound } from "../../utils";
+import { useUiStore } from "../../store/uiStore";
+import "./../../assets/css/mouse.css";
+import AudioRef from "../UI/AudioRef";
 const Mouse: FC = () => {
   const clickSoundRef = useRef<HTMLAudioElement>(null);
   const { selectedMouseKey, usedKeys, setSelectedKey, setSelectedMouseKey } = useMainStore();

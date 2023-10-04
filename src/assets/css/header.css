@@ -1,0 +1,21 @@
+.header-inner {
+    padding-bottom: 25px;
+    max-width: 625px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.header h1 {
+    padding-bottom: 25px;
+}
+
+.header span {
+    cursor: pointer;
+    padding: 0 5px;
+    cursor: pointer;
+    background: #8a7237;
+}
+
+.header span:hover {
+    background: #7a5d19;
+}

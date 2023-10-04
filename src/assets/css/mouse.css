@@ -5,8 +5,8 @@
 }
 
 .mouse img {
-    width: 150px;
     padding: 0 15px;
+    width: 150px;
 }
 
 .mouse span {
@@ -31,6 +31,18 @@
 
 .mouse span:hover {
     cursor: pointer;
+    background: #ffffff;
+    color: black;
+}
+
+.mouse .mouse-button-up:hover {
+    background-color: transparent;
+    color: #08b81c;
+}
+
+.mouse .mouse-button-down:hover {
+    background-color: transparent;
+    color: #08b81c;
 }
 
 .mouse span.selected {
@@ -78,16 +90,16 @@
     padding: 5px;
     font-size: 25px;
     color: #ffffff;
-    top: -20px;
-    left: 64px;
+    top: -15px;
+    left: 63px;
 }
 
 .mouse-button-down {
     padding: 5px;
     font-size: 25px;
     color: #ffffff;
-    top: 53px;
-    left: 64px;
+    top: 45px;
+    left: 63px;
 }
 
 .mouse-button5 {

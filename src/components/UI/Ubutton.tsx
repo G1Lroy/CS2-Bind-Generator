@@ -5,11 +5,12 @@ interface UbuttonProps {
   disabled?: boolean;
   OnClick: () => void;
   text: string;
+  className?: string;
 }
 
-const Ubutton: FC<UbuttonProps> = ({ title, OnClick, disabled, text }) => {
+const Ubutton: FC<UbuttonProps> = ({ title, OnClick, disabled, text, className }) => {
   return (
-    <button title={title} disabled={disabled} onClick={() => OnClick()}>
+    <button className={className} title={title} disabled={disabled} onClick={() => OnClick()}>
       {text}
     </button>
   );

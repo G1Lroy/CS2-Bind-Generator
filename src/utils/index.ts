@@ -6,7 +6,6 @@ export const playSound = (ref: RefObject<HTMLAudioElement>): void => {
   ref.current.volume = 0.1;
   ref.current.play();
 };
-
 export const generateCfgFile = (data: string[]): void => {
   const cfgData = data.join("\n");
   const guideText = `===================== CS2 ALL BINDS =====================

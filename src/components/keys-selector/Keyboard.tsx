@@ -1,12 +1,12 @@
 import { FC, useRef } from "react";
-import { mainLayout, middleLayout, numpadLayout } from "../constans/keyboard";
-import { mainValues, midValues, numpadValues } from "../constans/keyboard/keyVaule";
-import { playSound } from "../utils";
-import { useMainStore } from "../store";
-import { useUiStore } from "../store/uiStore";
-import clickSound from "./../assets/sounds/ckick.mp3";
-import "./../assets/css/keyboard.css";
-import AudioRef from "./UI/AudioRef";
+import { mainLayout, middleLayout, numpadLayout } from "../../constans/keyboard";
+import { mainValues, midValues, numpadValues } from "../../constans/keyboard/keyVaule";
+import { playSound } from "../../utils";
+import { useMainStore } from "../../store";
+import { useUiStore } from "../../store/uiStore";
+import clickSound from "./../../assets/sounds/ckick.mp3";
+import "./../../assets/css/keyboard.css";
+import AudioRef from "../UI/AudioRef";
 
 const Keyboard: FC = () => {
   const clickSoundRef = useRef<HTMLAudioElement>(null);

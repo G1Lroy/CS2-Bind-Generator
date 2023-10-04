@@ -46,7 +46,11 @@ import ssg08 from "./../assets/images/rifle/ssg08.webp";
 import sg553 from "./../assets/images/rifle/sg553.webp";
 import aug from "./../assets/images/rifle/aug.webp";
 import awp from "./../assets/images/rifle/awp.webp";
-
+import radar from "./../assets/icons/radar.png";
+import jumpThrow from "./../assets/icons/jumpthrow.jpg";
+import jumpCrl from "./../assets/icons/jump+control.jpg";
+import dropBomb from "./../assets/icons/dropbomb.jpg";
+import mute from "./../assets/icons/mute.png";
 export const pistolsImg = {
   usp,
   p250,
@@ -100,4 +104,11 @@ export const riflesImgs = {
   sg553,
   aug,
   awp,
+};
+export const otherBindsImg = {
+  radar,
+  mute,
+  dropBomb,
+  jumpCrl,
+  jumpThrow,
 };
