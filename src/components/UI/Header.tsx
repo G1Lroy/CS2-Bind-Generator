@@ -18,9 +18,6 @@ const Header: FC = () => {
             <br />
             <strong> ...\Counter-Strike Global Offensive\game\csgo\cfg</strong>
           </p>
-          <p>
-            Add this command to your launch options: <strong>+exec autoexec.cfg</strong>
-          </p>
         </div>
       </div>
     </header>

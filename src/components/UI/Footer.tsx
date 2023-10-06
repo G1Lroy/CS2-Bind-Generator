@@ -28,7 +28,7 @@ const Footer = () => {
 
       <p>
         Relese on GitHub:{" "}
-        <a target="_blank" href="">
+        <a target="_blank" href="https://github.com/G1Lroy/CS2-Bind-Generator">
           Link
         </a>
         .
