@@ -2,11 +2,13 @@
 .output {
     position: relative;
     width: 300px;
+    height: 600px;
     padding: 0 10px;
     cursor: text;
     text-align: left;
     background-color: #c3bfbf;
     grid-area: BO;
+    overflow-y: scroll;
 }
 
 
@@ -34,3 +36,8 @@
 .green-btn {
     background-color: green;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+

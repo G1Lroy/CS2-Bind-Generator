@@ -73,3 +73,18 @@ strong {
   font-weight: bolder;
   color: rgb(248, 232, 140);
 }
+
+
+::-webkit-scrollbar:hover {
+  background-color: #969696;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+/* Стилизация полосы прокрутки при наведении внутри трека */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
