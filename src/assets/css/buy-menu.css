@@ -1,8 +1,8 @@
 .buy-menu {
     user-select: none;
     position: relative;
-    min-width: 865px;
-    height: 280px;
+    width: 1000px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,12 @@
     overflow: hidden;
     cursor: pointer;
 
-    width: 90px;
-    height: 50px;
+    width: 105px;
+    height: 65px;
 
     border-radius: 5px;
     background-color: #f3cfab;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .item-img {
@@ -36,7 +36,7 @@
 }
 
 .buy-menu-item.selected {
-    box-shadow: 0px 0px 2px 2px black;
+    box-shadow: 0px 0px 2px 1px black;
     z-index: 1;
     transform: scale(2) !important;
 }

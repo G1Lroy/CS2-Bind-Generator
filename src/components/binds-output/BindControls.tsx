@@ -34,7 +34,8 @@ const BindControls: FC = () => {
     playSound(useSoundRef);
   };
 
-  let isKeyToBindValid = keyToBind && (selectedEquip || selectedAction.length);
+  let isKeyToBindValid =
+    (keyToBind && (selectedEquip || selectedAction.length)) || selectedAction[0]?.includes("viewmodel");
   let isButtonDisabled = !isKeyToBindValid;
 
   return (

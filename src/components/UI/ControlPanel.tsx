@@ -11,14 +11,14 @@ const ControlPanel: FC = () => {
     <div className="control-panel">
       <Ubutton
         OnClick={() => setCurrTab("buy-menu")}
-        text="Buy menu binds"
+        text="Buy menu binds🔵"
         disabled={currTab === "buy-menu"}
         className={`control-btn ${currTab === "buy-menu" ? "active" : ""}`}
         title="🛒💲"
       ></Ubutton>
       <Ubutton
         OnClick={() => setCurrTab("other-binds")}
-        text=" Helpful binds"
+        text=" Helpful binds🔴"
         disabled={currTab === "other-binds"}
         className={`control-btn ${currTab === "other-binds" ? "active" : ""}`}
         title="♿⚙️"

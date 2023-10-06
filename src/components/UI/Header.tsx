@@ -12,9 +12,9 @@ const Header: FC = () => {
           ⚙️
         </span>
         <div hidden={!isExpanded}>
-          <p>You can generate buy binds, and useful commands in one place</p>
+          <p>You can generate buy binds and useful commands in one place</p>
           <p>
-            After creating commands, you can download autoexec file and paste it to:
+            After creating commands, download cfg file and paste it to:
             <br />
             <strong> ...\Counter-Strike Global Offensive\game\csgo\cfg</strong>
           </p>

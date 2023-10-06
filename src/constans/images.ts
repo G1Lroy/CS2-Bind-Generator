@@ -51,6 +51,7 @@ import jumpThrow from "./../assets/icons/jumpthrow.jpg";
 import jumpCrl from "./../assets/icons/jump+control.jpg";
 import dropBomb from "./../assets/icons/dropbomb.jpg";
 import mute from "./../assets/icons/mute.png";
+import fov from "./../assets/icons/viewmodel.jpg";
 export const pistolsImg = {
   usp,
   p250,
@@ -111,4 +112,5 @@ export const otherBindsImg = {
   dropBomb,
   jumpCrl,
   jumpThrow,
+  fov,
 };

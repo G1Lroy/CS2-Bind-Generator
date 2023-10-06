@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  font-family: 'Kanit', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: radial-gradient(circle, rgba(66, 66, 66, 1) 0%, rgba(36, 36, 36, 1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,16 +19,25 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 body {
-  font-family: 'Kanit', sans-serif;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  align-items: flex-start;
 }
+
+.App {
+  margin: 0 auto;
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1370px;
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -45,10 +59,6 @@ button:hover {
   background-color: #484848;
 }
 
-.green-btn {
-  background-color: green;
-}
-
 button:focus,
 button:focus-visible {
   outline: 1px auto;
@@ -58,7 +68,8 @@ input,
 label {
   cursor: pointer;
 }
-strong{
+
+strong {
   font-weight: bolder;
   color: rgb(248, 232, 140);
 }

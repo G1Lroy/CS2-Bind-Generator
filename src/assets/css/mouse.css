@@ -15,6 +15,8 @@
 
 }
 
+
+
 .mouse-button {
     background-color: #3f3f3f;
     border-radius: 50%;
@@ -24,58 +26,37 @@
     right: 35px;
 }
 
-.left {
+.mouse-button.left {
     right: auto;
     left: 33px;
 }
 
-.mouse span:hover {
-    cursor: pointer;
-    background: #ffffff;
-    color: black;
-}
-
-.mouse .mouse-button-up:hover {
+.mouse-button-up.selected,
+.mouse-button-down.selected {
     background-color: transparent;
-    color: #08b81c;
+    color: #01ff1e;
 }
 
-.mouse .mouse-button-down:hover {
-    background-color: transparent;
-    color: #08b81c;
-}
 
-.mouse span.selected {
+
+.mouse-button.selected {
     background-color: #08b81c;
 }
 
-.mouse span.used {
+.mouse .used {
     pointer-events: none;
     background-color: #0c0f22;
     border-color: transparent;
 }
 
-.mouse .mouse-button-up.selected {
-    background-color: transparent;
-    color: #01ff1e;
-}
 
-.mouse .mouse-button-down.selected {
-    background-color: transparent;
-    color: #01ff1e;
-}
-
-.mouse .mouse-button-up.used {
+.mouse-button-up.used,
+.mouse-button-down.used {
     background-color: transparent;
     pointer-events: none;
     color: #fbc500;
 }
 
-.mouse .mouse-button-down.used {
-    background-color: transparent;
-    color: #fbc500;
-    pointer-events: none;
-}
 
 .mouse-button-wheel {
     background-color: #3f3f3f;
@@ -86,20 +67,24 @@
     border-radius: 10px;
 }
 
+.mouse-button-wheel.selected {
+    background-color: #08b81c;
+}
+
 .mouse-button-up {
-    padding: 5px;
+    line-height: 1;
     font-size: 25px;
     color: #ffffff;
-    top: -15px;
-    left: 63px;
+    top: -5px;
+    left: 68px;
 }
 
 .mouse-button-down {
-    padding: 5px;
+    line-height: 1;
     font-size: 25px;
     color: #ffffff;
-    top: 45px;
-    left: 63px;
+    top: 55px;
+    left: 68px;
 }
 
 .mouse-button5 {
@@ -122,4 +107,10 @@
     border-radius: 5px;
     font-size: 10px;
     color: #ffffff;
+}
+
+.mouse span:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: black;
 }

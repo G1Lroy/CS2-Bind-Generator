@@ -33,12 +33,17 @@ export const otherBinds = [
   },
   {
     action: "Scale Radar",
-    text: [`bind "_" "incrementvar cl_radar_scale 0.25 1 0.75"`],
+    text: [`bind "_" "incrementvar cl_radar_scale 0.50 1 0.75"`],
     img: otherBindsImg.radar,
   },
   {
     action: "Jump+control",
     text: ['alias +jumpduck "+duck; +jump"', 'alias -jumpduck "-duck; -jump"', 'bind "_" "+jumpduck"'],
     img: otherBindsImg.jumpCrl,
+  },
+  {
+    action: "Fov max right",
+    text: ["viewmodel_fov 68", "viewmodel_offset_x 2.5", "viewmodel_offset_y 2", "viewmodel_offset_z -1"],
+    img: otherBindsImg.fov,
   },
 ];

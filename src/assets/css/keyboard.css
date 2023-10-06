@@ -4,7 +4,7 @@
     font-size: 13px;
     align-items: flex-start;
     background-color: #000000;
-    padding:10px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid #327a16;
 }
@@ -18,9 +18,10 @@
 }
 
 .key {
+    flex: 1;
     user-select: none;
     cursor: pointer;
-    padding: 5px ;
+    padding: 5px 0px;
     border-radius: 2px;
     background-color: #3f3f3f;
     border: 1px solid #327a16;
@@ -37,24 +38,28 @@
 }
 
 /* main */
-.main-section{
-    width: 430px;
+.main-section {
+    width: 500px;
 }
+
 .main-section .key {
-    flex: 1;
+    padding: 5px;
 }
 
 .key.space {
-    flex-basis: 200px;
+    flex-basis: 250px;
+}
+
+.key.shift {
+    flex-basis: 45px;
 }
 
 /* mid */
-.mid-section{
+.mid-section {
     width: 120px;
 }
+
 .mid-section .key {
-    padding: 5px 0;
-    flex: 1;
     max-width: 38px;
 }
 
@@ -62,15 +67,11 @@
 .num-section {
     width: 120px;
 }
-.num-section .key {
-    flex: 1;
-    padding: 5px 0px;
-}
 
 .empty {
     height: 31.5px;
 }
 
 .key:hover {
-    background-color: #151515;;
+    background-color: #151515;
 }

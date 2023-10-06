@@ -1,0 +1,27 @@
+.main {
+    width: 1300px;
+    display: grid;
+    background-color: #0a0a0a;
+    justify-content: space-between;
+    grid-template-areas:
+        "TC TC TC BO"
+        "KS KS KS BO"
+    ;
+    /* 
+    -TC tab content
+    -BO bind output
+    -KS key selector
+    */
+}
+
+.key-selector {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: KS;
+}
+
+.tab-content {
+    grid-area: TC;
+}

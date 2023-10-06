@@ -1,14 +1,11 @@
 import { FC, useEffect } from "react";
-import "./App.css";
-import BindsOutput from "./components/binds-output/BindsOutput";
 import ControlPanel from "./components/UI/ControlPanel";
 import { useMainStore } from "./store";
-import TabContent from "./components/UI/TabContent";
 import { useUiStore } from "./store/uiStore";
 import { replaceChar } from "./utils";
-import Keyboard from "./components/keys-selector/Keyboard";
-import Mouse from "./components/keys-selector/Mouse";
 import Header from "./components/UI/Header";
+import Main from "./components/UI/Main";
+import Footer from "./components/UI/Footer";
 
 const App: FC = () => {
   const {
@@ -54,19 +51,13 @@ const App: FC = () => {
   }, [keyToBind, selectedEquip, selectedAction]);
 
   return (
-    <div onContextMenu={(e) => resetSelected(e)}>
-      <Header />
-      <ControlPanel />
-      <main className="main">
-        <TabContent />
-        <div className="key-selector">
-          <Keyboard />
-          <Mouse />
-        </div>
-        <BindsOutput />
-      </main>
-
-      <footer>FOOTER</footer>
+    <div className="App" onContextMenu={(e) => resetSelected(e)}>
+      <div className="container">
+        <Header />
+        <ControlPanel />
+        <Main />
+      </div>
+      <Footer />
     </div>
   );
 };

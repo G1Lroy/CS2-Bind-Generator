@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useMainStore } from "../../store";
-import "./../../assets/css/bindsOutput.css";
+import "./../../assets/css/binds-output.css";
 import BindControls from "./BindControls";
 
 const BindsOutput: FC = () => {

@@ -1,19 +1,19 @@
-.header-inner {
+.header {
+    width: 100%;
     padding-bottom: 25px;
-    max-width: 625px;
+}
+
+.header-inner {
     text-align: left;
     font-size: 18px;
 }
 
-.header h1 {
-    padding-bottom: 25px;
-}
 
 .header span {
     cursor: pointer;
     padding: 0 5px;
     cursor: pointer;
-    background: #8a7237;
+    background: #e2b84d;
 }
 
 .header span:hover {
