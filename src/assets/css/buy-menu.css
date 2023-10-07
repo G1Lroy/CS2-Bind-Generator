@@ -40,3 +40,30 @@
     z-index: 1;
     transform: scale(2) !important;
 }
+
+@media screen and (max-width :1300px) {
+    .buy-menu {
+        padding: 0 10px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .buy-menu-col {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width :815px) {
+    .buy-menu-inner {
+        display: flex;
+    }
+    .buy-menu-col {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width :576px) {
+    .buy-menu-item {
+        width: 65px;
+        height: 40px;
+    }
+}

@@ -1,5 +1,6 @@
 .main {
-    width: 1300px;
+
+    max-width: 1300px;
     display: grid;
     background-color: #0a0a0a;
     justify-content: space-between;
@@ -15,7 +16,6 @@
 }
 
 .key-selector {
-    height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -24,4 +24,19 @@
 
 .tab-content {
     grid-area: TC;
+}
+
+@media screen and (max-width :1300px) {
+    .main {
+        display: block;
+    }
+
+    .key-selector {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tab-content {
+        padding: 25px 0;
+    }
 }

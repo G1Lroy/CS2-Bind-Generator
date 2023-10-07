@@ -68,10 +68,107 @@
     width: 120px;
 }
 
-.empty {
+.keyboard .empty {
     height: 31.5px;
+    flex: 1;
+    background-color: transparent;
 }
 
 .key:hover {
     background-color: #151515;
+}
+
+@media screen and (max-width :815px) {
+    .keyboard {
+        padding: 10px 5px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .key {
+        padding: 5px 0px;
+    }
+
+    .main-section {
+        width: 350px;
+    }
+
+    .main-section .key {
+        padding: 5px 0;
+    }
+
+    .key.space {
+        flex-basis: 200px;
+    }
+
+    .key.shift {
+        flex-basis: 25px;
+    }
+
+    /* mid */
+    .mid-section {
+        width: 100px;
+    }
+
+    /* num */
+    .num-section {
+        width: 100px;
+    }
+
+    .keyboard .empty {
+        height: 30px;
+    }
+
+    .mid-section .key,
+    .num-section .key {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width :576px) {
+    .keyboard {
+        padding: 5px 3px;
+        font-size: 9px;
+        gap: 5px;
+    }
+
+    .row {
+        margin-bottom: 1px;
+        gap: 1px;
+    }
+
+    .key {
+        padding: 2px 0px;
+
+    }
+
+    .main-section {
+        width: 235px;
+    }
+
+    .main-section .key {
+        padding: 2px 0;
+    }
+
+    .key.space {
+        flex-basis: 100px;
+    }
+
+    /* mid */
+    .mid-section {
+        width: 60px;
+    }
+
+    .mid-section .key {
+        max-width: 18px;
+    }
+
+    /* num */
+    .num-section {
+        width: 60px;
+    }
+
+    .keyboard .empty {
+        height: 19.5px;
+    }
+
 }

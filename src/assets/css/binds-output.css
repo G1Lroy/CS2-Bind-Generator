@@ -41,3 +41,13 @@
     width: 10px;
 }
 
+@media screen and (max-width :1300px) {
+    .output {
+        width: 100%;
+    }
+}
+@media screen and (max-width :579px) {
+    .output {
+        height: auto;
+    }
+}

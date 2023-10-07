@@ -19,8 +19,8 @@ export const numpadValues: Record<string, string> = {
 export const midValues: Record<string, string> = {
   ins: "Ins",
   home: "Home",
-  pgup: "Pg ↑",
-  pgdn: "Pg ↓",
+  pgup: "Pg↑",
+  pgdn: "Pg↓",
   del: "Del",
   end: "End",
   uparrow: "↑",
