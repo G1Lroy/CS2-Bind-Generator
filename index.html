@@ -7,26 +7,26 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="CS2 Bind Generator - Create your own binds and customize commands for CS2. Discover all CS2 binds in one place.">
+    content="Generate buy binds and customize commands for CS2. Discover all CS2 binds in one place | Генератор биндов кс2">
   <meta name="keywords"
-    content="CS2, CS2 Bind Generator, key binds, key bindings, CS2 game binds, CS2 commands, customize binds, helpful, binds,">
+    content="CS2 key bind generator, binds generator, CS2 binds, cs2 buy bind, jumpthrow bind, nades binds, CS2 commands, Counter-Strike 2 binds, script generator, бинды кс 2, генератор биндов,">
   <meta property="og:title" content="CS2 Bind Generator">
-  <meta property="og:description"
-    content="CS2 Bind Generator - Create your own binds and customize commands for CS2. Discover all CS2 binds in one place.">
   <meta property="og:url"
     content="https://cs2-binds-generator.web.app/">
-  <meta property="og:site_name" content="CS2" binds="binds"
-    generator="">
   <meta property="og:type" content="website">
+  <meta property="og:image"
+    content="https://drive.google.com/uc?id=1gkMUQCLX6-6Tm6t0tqY6KmQxGz1AzLZx">
   <meta name="google-site-verification"
     content="ONEC40Tmzgd6vWk6XjHZCocarsiJSleoO6rCJJWqJFw" />
+  <meta name="yandex-verification"
+    content="7065f4591e4a41d0" />
   <link rel="icon" type="image/svg+xml"
     href="./public/favico.svg" />
   <link
     href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap"
     rel="stylesheet">
 
-  <title>CS2 Bind Generator | CS2 Binds</title>
+  <title>CS2 Bind Generator</title>
 </head>
 
 <body>
@@ -35,9 +35,9 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-
+    const API_KEY = import.meta.env.VITE_GA_API_KEY
     const firebaseConfig = {
-      apiKey: "AIzaSyB9SabKjJiitejZY8FT07ysY7R2_M3QDL4",
+      apiKey: API_KEY,
       authDomain: "cs2-binds-generator.firebaseapp.com",
       projectId: "cs2-binds-generator",
       storageBucket: "cs2-binds-generator.appspot.com",
@@ -45,7 +45,6 @@
       appId: "1:279530912024:web:2eea5daaeb4af627b5066d",
       measurementId: "G-0Z9ELQZ142",
     };
-
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 

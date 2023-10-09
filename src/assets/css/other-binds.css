@@ -35,6 +35,7 @@
 
 .command img {
     width: 125px;
+    height: 115px;
 }
 
 @media screen and (max-width :1300px) {

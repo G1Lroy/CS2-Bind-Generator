@@ -49,7 +49,8 @@ const App: FC = () => {
       setCurrentBind(selectedAction.length ? replaceChar(selectedAction, keyToBind) : [`${keyToBind}`]);
     }
   }, [keyToBind, selectedEquip, selectedAction]);
-
+  
+  
   return (
     <div className="App" onContextMenu={(e) => resetSelected(e)}>
       <div className="container">
