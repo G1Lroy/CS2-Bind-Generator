@@ -21,7 +21,13 @@ const BuyMenuItem: FC<BuyMenyitemProps> = React.memo(({ item, clickHandler }) =>
       style={animationProps}
     >
       {item.img ? (
-        <img loading="lazy" className={`item-img `} src={item.img} title={item.title} alt={item.title} />
+        <img
+          loading="lazy"
+          className="item-img"
+          src={item.img}
+          title={item.title}
+          alt={`bind "key" "buy ${item.value}"`}
+        />
       ) : (
         <MemoizedSkeletonLoader />
       )}

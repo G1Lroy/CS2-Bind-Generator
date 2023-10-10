@@ -20,9 +20,9 @@ export const otherBinds = [
     text: ['alias "+dropc4" "slot5"', 'alias "-dropc4" "drop"', `bind "_" "+dropc4;"`],
     img: otherBindsImg.dropBomb,
   },
-  { action: "ToggleMuteAll", text: [`bind "_" "toggle voice_modenable 1 0"`], img: otherBindsImg.mute },
+  { action: "Toggle Mute All", text: [`bind "_" "toggle voice_modenable 1 0"`], img: otherBindsImg.mute },
   {
-    action: "Jump Throw",
+    action: "Jumpthrow",
     text: [
       'alias "+bish" "+jump"',
       'alias "+bash" "-attack; -attack2"',
@@ -37,7 +37,7 @@ export const otherBinds = [
     img: otherBindsImg.radar,
   },
   {
-    action: "Jump+control",
+    action: "Jump + Control",
     text: ['alias +jumpduck "+duck; +jump"', 'alias -jumpduck "-duck; -jump"', 'bind "_" "+jumpduck"'],
     img: otherBindsImg.jumpCrl,
   },
@@ -47,4 +47,3 @@ export const otherBinds = [
     img: otherBindsImg.fov,
   },
 ];
-

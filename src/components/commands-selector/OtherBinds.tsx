@@ -31,7 +31,7 @@ const OtherBinds: FC = () => {
             onClick={() => clikHandler(b.text)}
           >
             {b.action}
-            <img src={b.img} alt={b.action} />
+            <img src={b.img} alt={`bind key "${b.action}"`} />
           </animated.div>
         ))}
       </div>

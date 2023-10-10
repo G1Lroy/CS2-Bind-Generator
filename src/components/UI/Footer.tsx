@@ -25,14 +25,6 @@ const Footer = () => {
         </a>
         .
       </p>
-
-      <p>
-        Relese on GitHub:{" "}
-        <a target="_blank" href="https://github.com/G1Lroy/CS2-Bind-Generator">
-          Link
-        </a>
-        .
-      </p>
       <p>&copy; {new Date().getFullYear()}. All rights reserved.</p>
     </footer>
   );

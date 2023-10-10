@@ -14,9 +14,9 @@ interface UinputProps {
 
 const Uinput: FC<UinputProps> = ({ ...p }) => {
   return (
-    <label  title={p.title} htmlFor={p.htmlFor}>
+    <label title={p.title} htmlFor={p.htmlFor}>
       <input id={p.id} type={p.type} checked={p.checkedCondition} onChange={() => p.OnChange()}></input>
-      {p.imgSource && <img className={p.imageClassName} src={p.imgSource} alt={p.title} />}
+      {p.imgSource && <img className={p.imageClassName} src={p.imgSource} alt={`bind ${p.title}`} />}
       {p.text}
     </label>
   );
