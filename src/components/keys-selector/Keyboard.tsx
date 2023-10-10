@@ -24,7 +24,7 @@ const Keyboard: FC = () => {
     return [
       key !== "" ? "key" : "empty",
       key === "space" ? "space" : "",
-      key === "shift" || key === "Shift" ? "shift" : "",
+      key === "shift" || key === "Shift" || key === "backspace" ? "shift" : "",
       key === selectedKey ? "selected" : "",
       usedKeys.includes(key) ? "used" : "",
     ].join(" ");

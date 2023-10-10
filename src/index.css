@@ -51,6 +51,7 @@ button {
   border: none;
   padding: 5px;
   background-color: #000000;
+  color: inherit;
   cursor: pointer;
   transition: all 0.1s ease-in;
 }

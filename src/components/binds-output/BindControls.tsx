@@ -47,6 +47,7 @@ const BindControls: FC = () => {
         text="+Add command"
       />
       <Ubutton
+        className={printedBind.length ? "green-btn" : ""}
         OnClick={() => generateCfgFile(printedBind)}
         title={!printedBind.length ? "Add some binds" : "💾"}
         disabled={!printedBind.length}
